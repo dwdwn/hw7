@@ -1,0 +1,18 @@
+This card is typically used in servers that need multiple network interfaces, but why would someone need so many network interfaces in the first place?
+
+In my case, I just wanted to explore the unknown, and see how many interfaces I could get working on my Pi, with full gigabit speed on each one.
+
+But some people might want to use the Pi as a router, maybe using the popular OpenWRT or pfSense software, and having multiple fast interfaces is essential to building a custom router.
+
+Other people might want multiple interfaces for network segregation, for redundancy, or to have multiple IP addresses for traffic routing and metering.
+
+Whatever the case, none of that is important if the card doesn't even work! So let's plug it in.
+
+Getting Drivers
+My first attempt to get a driver was to clone the Raspberry Pi Linux source, and check with make menuconfig to search for any Intel networking drivers in the Linux source tree. I didn't find any, though, so I turned to the next idea, searching on Intel's website for some drivers.
+
+The first page I came to was the Intel Ethernet Adapter Complete Driver Pack, which looked promising. But I noticed it was over 600 MB, was listed as 'OS Independent', and after I looked at what was in the driver pack, it looked like half of Intel's chips over the years were supported.
+
+I just wanted to get the I340 working, and I really didn't care about all the Windows drivers and executables, so I kept searching.
+
+Eventually I landed on the Linux Base Driver for Intel Gigabit Ethernet Network Connections page, and this page looked a lot more targeted towards Linux and a smaller set of devices.
